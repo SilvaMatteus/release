@@ -31,13 +31,8 @@ ENV KUBE_DYNAMIC_CROSSPLATFORMS \
   ppc64el \
   s390x
 
-ENV KUBE_CROSSPLATFORMS \
-  linux/386 \
-  linux/arm linux/arm64 \
-  linux/ppc64le \
-  linux/s390x \
-  darwin/amd64 darwin/386 \
-  windows/amd64 windows/386
+# remove not supported platforms
+ENV KUBE_CROSSPLATFORMS ""
 
 ##------------------------------------------------------------
 
